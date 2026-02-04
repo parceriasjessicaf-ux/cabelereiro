@@ -8,7 +8,7 @@
   <meta name="description" content="Cabeleireira - Bio Link">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=sans-serif:wght@400;600;700&family=sans-serif:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=sans-serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -34,7 +34,7 @@ button { font-family: inherit; cursor: pointer; }
 .hero-title { font-family: 'sans-serif', Georgia, serif; font-size: clamp(28px, 8vw, 36px); font-weight: 600; margin-bottom: 12px; line-height: 1.2; }
 .hero-subtitle { font-size: clamp(14px, 4vw, 16px); opacity: 0.9; max-width: 320px; line-height: 1.6; }
 
-.card-split { display: flex; overflow: hidden; margin: 8px 12px; }
+.card-split { display: flex; overflow: hidden; position: relative; }
 .card-split.no-image { display: block; }
 .card-imageLeft { flex-direction: row; }
 .card-imageRight { flex-direction: row-reverse; }
@@ -98,64 +98,68 @@ button { font-family: inherit; cursor: pointer; }
   <div class="container">
 
     <div class="card-split-wrapper" style="position: relative; width: 100%; margin: 12px auto; overflow: visible;">
-      <div class="card-split card-imageRight" style="background: linear-gradient(to right, #000000, #1a1a1a);  border-radius: 16px; box-shadow: none; min-height: 170px;">
+      <div class="card-split card-imageRight" style="background: linear-gradient(to right, #000000, #1a1a1a);  border-radius: 16px; box-shadow: none; min-height: 170px; position: relative;">
+        
         
           <div class="card-image-wrapper">
-            <img src="assets/card-0.jpg" alt="" class="card-image" style="object-fit: cover; object-position: 50% 50%; transform: scale(1); transform-origin: 50% 50%;">
-            <div class="card-image-fade" style="background: linear-gradient(to left, transparent 45%, #0e0e0e 100%);"></div>
+            <img src="assets/card-0.jpg" alt="" class="card-image" style="object-fit: cover; object-position: 50% 50%; transform: scale(1); transform-origin: 50% 50%; position: relative; z-index: 1; border-radius: 0px;">
+            <div class="card-image-fade" style="background: linear-gradient(to left, transparent 55%, #0e0e0e 100%); z-index: 2;"></div>
           </div>
-        <div class="card-content">
-          <h3 class="card-title" style="color: #F6F6F6">Resultados reais</h3>
-          <p class="card-desc" style="color: #CDCDCD">Veja transformações incríveis feitas em nossas clientes</p>
-          <a href="https://example.com" class="card-button" style="background: linear-gradient(to right, #DDD276, #CAAF48);  color: #1A1A1A; border-radius: 999px; width: fit-content; max-width: 100%; " target="_blank" rel="noopener noreferrer">Ver portfólio</a>
+        <div class="card-content" style="position: relative; z-index: 3;">
+          <h3 class="card-title" style="font-family: sans-serif, sans-serif; font-weight: 700; font-style: normal; font-size: 16px; text-decoration: none; text-transform: none; color: #F6F6F6;">Resultados reais</h3>
+          <p class="card-desc" style="font-family: sans-serif, sans-serif; font-weight: 400; font-style: normal; font-size: 0.875rem; text-decoration: none; text-transform: none; color: #CDCDCD; text-align: left;">Veja transformações incríveis feitas em nossas clientes</p>
+          <a href="https://example.com" class="card-button" style="background: linear-gradient(to right, #DDD276, #CAAF48);  color: #1A1A1A; border-radius: 999px; width: fit-content; max-width: 100%;  font-family: sans-serif, sans-serif; font-weight: 600; font-style: normal; font-size: 12px; text-decoration: none; text-transform: none;" target="_blank" rel="noopener noreferrer">Ver portfólio</a>
         </div>
       </div>
       
     </div>
 
     <div class="card-split-wrapper" style="position: relative; width: 100%; margin: 12px auto; overflow: visible;">
-      <div class="card-split card-imageLeft" style="background-color: #1A1A1A;  border-radius: 16px; box-shadow: none; min-height: 170px;">
+      <div class="card-split card-imageLeft" style="background-color: #1A1A1A;  border-radius: 16px; box-shadow: none; min-height: 170px; position: relative;">
+        
         
           <div class="card-image-wrapper">
-            <img src="assets/card-1.jpg" alt="" class="card-image" style="object-fit: cover; object-position: 52% 100%; transform: scale(1.2); transform-origin: 52% 100%;">
-            <div class="card-image-fade" style="background: linear-gradient(to right, transparent 65%, #1A1A1A 100%);"></div>
+            <img src="assets/card-1.jpg" alt="" class="card-image" style="object-fit: cover; object-position: 52% 100%; transform: scale(1.2); transform-origin: 52% 100%; position: relative; z-index: 1; border-radius: 0px;">
+            <div class="card-image-fade" style="background: linear-gradient(to right, transparent 65%, #1A1A1A 100%); z-index: 2;"></div>
           </div>
-        <div class="card-content">
-          <h3 class="card-title" style="color: #F6F6F6">Nossos serviços</h3>
-          <p class="card-desc" style="color: #ffffff">Cortes, coloração, mechas, hidratação e tratamentos</p>
-          <a href="https://example.com" class="card-button" style="background-color: transparent; border: 1px solid #cbb04a; color: #F6F6F6; border-radius: 999px; width: fit-content; max-width: 100%; " target="_blank" rel="noopener noreferrer">Ver serviços</a>
+        <div class="card-content" style="position: relative; z-index: 3;">
+          <h3 class="card-title" style="font-family: sans-serif, sans-serif; font-weight: 700; font-style: normal; font-size: 16px; text-decoration: none; text-transform: none; color: #F6F6F6;">Nossos serviços</h3>
+          <p class="card-desc" style="font-family: sans-serif, sans-serif; font-weight: 400; font-style: normal; font-size: 0.875rem; text-decoration: none; text-transform: none; color: #ffffff; text-align: left;">Cortes, coloração, mechas, hidratação e tratamentos</p>
+          <a href="https://example.com" class="card-button" style="background-color: transparent; background: transparent; background-image: none; border: 1px solid #cbb04a; color: #F6F6F6; border-radius: 999px; width: fit-content; max-width: 100%;  font-family: sans-serif, sans-serif; font-weight: 600; font-style: normal; font-size: 12px; text-decoration: none; text-transform: none;" target="_blank" rel="noopener noreferrer">Ver serviços</a>
         </div>
       </div>
       
     </div>
 
     <div class="card-split-wrapper" style="position: relative; width: 100%; margin: 12px auto; overflow: visible;">
-      <div class="card-split card-imageRight" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://mlwywdyrvneqxvycmaba.supabase.co/storage/v1/object/public/biolink-images/button-backgrounds/50dd4519-9b44-4f96-acda-3a4f410cb050.jpg); background-size: cover; background-position: center;  border-radius: 16px; box-shadow: none; min-height: 170px;">
+      <div class="card-split card-imageRight" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://mlwywdyrvneqxvycmaba.supabase.co/storage/v1/object/public/biolink-images/button-backgrounds/50dd4519-9b44-4f96-acda-3a4f410cb050.jpg); background-size: cover; background-position: center;  border-radius: 16px; box-shadow: none; min-height: 170px; position: relative;">
+        
         
           <div class="card-image-wrapper">
-            <img src="assets/card-3.jpg" alt="" class="card-image" style="object-fit: contain; object-position: 60% 50%; transform: scale(1.7); transform-origin: 60% 50%;">
+            <img src="assets/card-3.jpg" alt="" class="card-image" style="object-fit: contain; object-position: 60% 50%; transform: scale(1.7); transform-origin: 60% 50%; position: relative; z-index: 1; border-radius: 0px;">
             
           </div>
-        <div class="card-content">
-          <h3 class="card-title" style="color: #F6F6F6">Ofertas da semana</h3>
-          <p class="card-desc" style="color: #CDCDCD">Promoções especiais e pacotes exclusivos por tempo limitado</p>
-          <a href="https://example.com" class="card-button" style="background: linear-gradient(to right, #363636, #AAAAAA, #545454);  color: #F6F6F6; border-radius: 999px; width: fit-content; max-width: 100%; " target="_blank" rel="noopener noreferrer">Aproveitar oferta</a>
+        <div class="card-content" style="position: relative; z-index: 3;">
+          <h3 class="card-title" style="font-family: sans-serif, sans-serif; font-weight: 700; font-style: normal; font-size: 16px; text-decoration: none; text-transform: none; color: #F6F6F6;">Ofertas da semana</h3>
+          <p class="card-desc" style="font-family: sans-serif, sans-serif; font-weight: 400; font-style: normal; font-size: 0.875rem; text-decoration: none; text-transform: none; color: #CDCDCD; text-align: left;">Promoções especiais e pacotes exclusivos por tempo limitado</p>
+          <a href="https://example.com" class="card-button" style="background: linear-gradient(to right, #363636, #AAAAAA, #545454);  color: #F6F6F6; border-radius: 999px; width: fit-content; max-width: 100%;  font-family: sans-serif, sans-serif; font-weight: 600; font-style: normal; font-size: 12px; text-decoration: none; text-transform: none;" target="_blank" rel="noopener noreferrer">Aproveitar oferta</a>
         </div>
       </div>
       
     </div>
 
     <div class="card-split-wrapper" style="position: relative; width: 100%; margin: 12px auto; overflow: visible;">
-      <div class="card-split card-imageLeft" style="background-color: #1A1A1A;  border-radius: 16px; box-shadow: none; min-height: 170px;">
+      <div class="card-split card-imageLeft" style="background-color: #1A1A1A;  border-radius: 16px; box-shadow: none; min-height: 170px; position: relative;">
+        
         
           <div class="card-image-wrapper">
-            <img src="assets/card-2.jpg" alt="" class="card-image" style="object-fit: contain; object-position: 50% 50%; transform: scale(1.3); transform-origin: 50% 50%;">
+            <img src="assets/card-2.jpg" alt="" class="card-image" style="object-fit: contain; object-position: 50% 50%; transform: scale(1.3); transform-origin: 50% 50%; position: relative; z-index: 1; border-radius: 0px;">
             
           </div>
-        <div class="card-content">
-          <h3 class="card-title" style="color: #F6F6F6">Reserve o seu horário</h3>
-          <p class="card-desc" style="color: #CDCDCD">Agende seu atendimento com praticidade</p>
-          <a href="https://example.com" class="card-button" style="background: linear-gradient(to right, #DDD276, #CAAF48);  color: #1A1A1A; border-radius: 999px; width: fit-content; max-width: 100%; " target="_blank" rel="noopener noreferrer">Agendar agora</a>
+        <div class="card-content" style="position: relative; z-index: 3;">
+          <h3 class="card-title" style="font-family: sans-serif, sans-serif; font-weight: 700; font-style: normal; font-size: 16px; text-decoration: none; text-transform: none; color: #F6F6F6;">Reserve o seu horário</h3>
+          <p class="card-desc" style="font-family: sans-serif, sans-serif; font-weight: 400; font-style: normal; font-size: 0.875rem; text-decoration: none; text-transform: none; color: #CDCDCD; text-align: left;">Agende seu atendimento com praticidade</p>
+          <a href="https://example.com" class="card-button" style="background: linear-gradient(to right, #DDD276, #CAAF48);  color: #1A1A1A; border-radius: 999px; width: fit-content; max-width: 100%;  font-family: sans-serif, sans-serif; font-weight: 600; font-style: normal; font-size: 12px; text-decoration: none; text-transform: none;" target="_blank" rel="noopener noreferrer">Agendar agora</a>
         </div>
       </div>
       
